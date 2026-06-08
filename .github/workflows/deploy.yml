@@ -24,11 +24,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        # --base sets the public path for assets.
-        # For a project page (github.com/<user>/<repo>), the URL is /<repo>/.
-        # If you're using a custom domain or a user/org page (github.com/<user>/<user>.github.io),
-        # change --base to / instead.
-        run: npm run build -- --base /${{ github.event.repository.name }}/
+        # GITHUB_REPOSITORY is always "owner/repo" — strip the owner prefix to get the repo name.
+        # If deploying to a custom domain or a user page (user.github.io), set BASE=/ instead.
+        run: |
+          BASE="/${GITHUB_REPOSITORY#*/}/"
+          echo "Building with --base $BASE"
+          npm run build -- --base "$BASE"
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
