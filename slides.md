@@ -51,9 +51,9 @@ class: text-sm
 </div>
 
 ---
-src: ./part1-foundations.md
+src: ./src/part1-foundations.md
 ---
 
 ---
-src: ./part2-quality-metrics.md
+src: ./src/part2-quality-metrics.md
 ---
