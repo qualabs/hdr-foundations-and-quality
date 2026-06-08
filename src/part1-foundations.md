@@ -1,6 +1,6 @@
 ---
 layout: intro-image-right
-image: './images/colorful.jpg'
+image: '/images/colorful.jpg'
 ---
 
 # HDR Color Spaces
@@ -81,7 +81,7 @@ $$x = \frac{X}{X+Y+Z} \quad y = \frac{Y}{X+Y+Z}$$
 
 <div class="flex items-center justify-center">
 
-<img src="./images/cie1931_dark_v2.png" />
+<img src="/images/cie1931_dark_v2.png" />
 
 
 </div>

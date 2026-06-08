@@ -5,12 +5,12 @@ transition: fade-out
 mdc: true
 background: https://www.viewsonic.com/vsAssetFile/global/img/colorpro/upload/journal/High-Dynamic-Range.jpg
 layout: intro-image
-image: './images/plane.jpg'
+image: '/images/plane.jpg'
 ---
 
 <div class="absolute top-10">
   <span class="font-700">
-    <img src="./images/logo qualabs 2019 blanco .png" width="130" />
+    <img src="/images/logo qualabs 2019 blanco .png" width="130" />
   </span>
 </div>
 
