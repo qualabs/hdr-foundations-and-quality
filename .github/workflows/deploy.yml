@@ -15,24 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Build
         # --base sets the public path for assets.
         # For a project page (github.com/<user>/<repo>), the URL is /<repo>/.
         # If you're using a custom domain or a user/org page (github.com/<user>/<user>.github.io),
         # change --base to / instead.
-        run: pnpm build --base /${{ github.event.repository.name }}/
+        run: npm run build -- --base /${{ github.event.repository.name }}/
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
