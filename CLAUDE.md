@@ -7,38 +7,35 @@ Authors: Emil Santurio (Part 1) and Manuel Barrabino (Part 2).
 
 ```
 slides.md                        # entry point: theme, title, agenda, src includes
-parts/                           # slide partials importados via src: (NO usar pages/)
+pages/
   part1/
     part1-foundations.md         # Part 1 — all content slides (complete)
     skipped.md                   # slides removed from the deck, kept for reference
-    assets/                      # imágenes de Part 1, co-ubicadas con el .md
-      colorful.jpg, cie1931_dark_v2.png, banding.jpg, window.jpg
+  part2/
+    part2-quality-metrics.md     # Part 2 — complete
+public/
+  assets/
+    part1/                       # imágenes de Part 1
+      cie1931_dark_v2.png, banding.jpg
       transfer_gamma.png, transfer_pq.png, transfer_hlg.png, transfer_comparison.png
       out_demo2/                  # demo media: matrix/color section
       out_demo3/                  # demo media: banding/bit-depth section
-  part2/
-    part2-quality-metrics.md     # Part 2 — WIP (Manu's section)
-    assets/                      # imágenes de Part 2, co-ubicadas
+    part2/                       # imágenes de Part 2
       vq-image.avif, dilution.png, caja-negra-blanca.png
       cvvdp_input.jpeg, cvvdp_output.png
       jod_psychometric_dark.png, jod_linear_range_dark.png, srcc_dark.png
       hdrmax/                     # HDRMAX explainer SVG sequence (hdrmax-1..5.svg)
-cinematic/                       # shared cinematic backgrounds (biblioteca compartida)
-  cinematic-1.jpg … cinematic-10.jpg
-plane.jpg                        # cover slide asset (raíz = base para slides.md)
-logo qualabs 2019 blanco .png    # brand asset
+    cinematic/                   # shared cinematic backgrounds (cinematic-1..10.jpg)
+    plane.jpg                    # cover slide asset
+    logo qualabs 2019 blanco .png
 components/                      # custom Vue components for the deck
 snippets/                        # syntax-highlighted code snippets
-public/                          # vacío — reservado para assets no-bundleables (fuentes, favicon)
 ```
 
 ### Convenciones de paths en los slides
 
-- Imágenes propias de cada parte: rutas relativas `./assets/X`
-- Cinematic (compartidas): `../../cinematic/cinematic-N.jpg` desde `parts/partN/`
-- Assets del cover en `slides.md`: `./plane.jpg`, `./logo qualabs...`
-- **No usar rutas absolutas** (`/path`): en Slidev v52 el plugin `slide-import-guard` las rechaza al no resolverlas desde el project root.
-- **No usar el directorio `pages/`** para partials: Slidev lo reserva para presentaciones adicionales con routing propio, lo que rompe la navegación del deck principal.
+- Todos los assets van bajo `public/assets/` y se referencian con rutas absolutas desde la raíz: `/assets/part1/X`, `/assets/part2/X`, `/assets/cinematic/cinematic-N.jpg`
+- Assets del cover en `slides.md`: `/assets/plane.jpg`, `/assets/logo qualabs...`
 
 ## Slide conventions
 
@@ -53,16 +50,19 @@ public/                          # vacío — reservado para assets no-bundleabl
   - Green `border-green-500 bg-green-500 bg-opacity-10` — correct approach / solution
   - Gray `border-gray-500` — neutral comparison box
 
+## Prerequisites
+
+The `slidev` Claude Code skill is required to work effectively on this presentation. Install it with:
+
+```bash
+npx skills add slidevjs/slidev
+```
+
 ## Dev workflow
 
 ```bash
 npm run dev      # hot-reload dev server at http://localhost:3030
-npm build    # static build output
-npm export   # PDF export
+npm run build    # static build output
+npm run export   # PDF export
 ```
-
-## Part 2 status
-
-`pages/part2/part2-quality-metrics.md` is WIP — Manu owns this section.
-No restructurar ni completar contenido sin su input.
 
