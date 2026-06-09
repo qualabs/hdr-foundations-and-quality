@@ -9,10 +9,10 @@ A [Slidev](https://sli.dev/) presentation covering HDR color science fundamental
 ## Running the presentation
 
 ```bash
-pnpm install        # or npm install
-pnpm dev            # starts dev server with hot-reload at http://localhost:3030
-pnpm build          # static build
-pnpm export         # export to PDF
+npm install        # or npm install
+npm dev            # starts dev server with hot-reload at http://localhost:3030
+npm build          # static build
+npm export         # export to PDF
 ```
 
 ---

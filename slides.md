@@ -3,14 +3,13 @@ theme: apple-basic
 title: "HDR Color Spaces"
 transition: fade-out
 mdc: true
-background: https://www.viewsonic.com/vsAssetFile/global/img/colorpro/upload/journal/High-Dynamic-Range.jpg
 layout: intro-image
-image: '/images/plane.jpg'
+image: '/assets/plane.jpg'
 ---
 
 <div class="absolute top-10">
   <span class="font-700">
-    <img src="/images/logo qualabs 2019 blanco .png" width="130" />
+    <img src="/assets/logo qualabs 2019 blanco .png" width="130" />
   </span>
 </div>
 
@@ -25,7 +24,7 @@ class: text-sm
 
 # Agenda
 
-<div class="grid grid-cols-2 gap-8 pt-4">
+<div class="grid grid-cols-1 gap-8 pt-4">
 
 <div>
 
@@ -42,18 +41,19 @@ class: text-sm
 
 ## Part II — HDR Video Quality Metrics
 
-1. ...
-2. ...
-3. ...
+- The Limitations of Traditional Metrics
+- HDRMAX
+- ColorVideoVDP
+- Comparative Analysis
 
 </div>
 
 </div>
 
 ---
-src: ./src/part1-foundations.md
+src: ./pages/part1/part1-foundations.md
 ---
 
 ---
-src: ./src/part2-quality-metrics.md
+src: ./pages/part2/part2-quality-metrics.md
 ---
