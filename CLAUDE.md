@@ -30,6 +30,12 @@ public/
     logo qualabs 2019 blanco .png
 components/                      # custom Vue components for the deck
 snippets/                        # syntax-highlighted code snippets
+demos/
+  part1-foundations/
+    README.md                    # prerequisites + running order for all 3 demos
+    01_ffprobe_hdr_inspection.sh # Demo 1 — reads VUI/SEI HDR10 metadata via ffprobe
+    02_wrong_matrix_red_shift.py # Demo 2 — visualizes wrong YCbCr matrix shift (Python/Pillow)
+    03_bit_depth_banding.sh      # Demo 3 — generates 8-bit vs 10-bit banding comparison
 ```
 
 ### Convenciones de paths en los slides

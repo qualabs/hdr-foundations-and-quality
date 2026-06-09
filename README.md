@@ -47,6 +47,20 @@ Four sections on HDR-aware perceptual quality metrics:
 
 ---
 
+## Live Demos (Part I)
+
+Three runnable scripts in [`demos/part1-foundations/`](demos/part1-foundations/) designed to be executed alongside the slides. Full prerequisites and running instructions in the [demo README](demos/part1-foundations/README.md).
+
+| # | Script | Ties to slide | What it shows |
+|---|--------|--------------|---------------|
+| 1 | `01_ffprobe_hdr_inspection.sh` | HEVC VUI signaling | Reads `colour_primaries`, `transfer_characteristics`, `matrix_coefficients` + ST 2086 / MaxCLL / MaxFALL from a real HDR10 file |
+| 2 | `02_wrong_matrix_red_shift.py` | YCbCr matrix coefficients | Reproduces the slide's numerical example; generates a side-by-side PNG showing the color shift from using the wrong matrix |
+| 3 | `03_bit_depth_banding.sh` | Bit depth / Barten model | Produces a static 8-bit vs 10-bit gradient comparison + fully signaled SDR and HDR10 playback files |
+
+**Suggested order during the talk:** Demo 1 after the VUI signaling slide → Demo 2 after the wrong-matrix numerical example → Demo 3 after the bit-depth slide.
+
+---
+
 ## Source files
 
 ```
@@ -66,6 +80,12 @@ public/
     logo qualabs 2019 blanco .png
 components/                      # custom Vue components
 snippets/                        # syntax-highlighted code snippets
+demos/
+  part1-foundations/
+    README.md                    # prerequisites + demo scripts documentation
+    01_ffprobe_hdr_inspection.sh # Demo 1 — reads VUI/SEI HDR10 metadata via ffprobe
+    02_wrong_matrix_red_shift.py # Demo 2 — visualizes wrong YCbCr matrix color shift (Python/Pillow)
+    03_bit_depth_banding.sh      # Demo 3 — generates 8-bit vs 10-bit banding comparison
 ```
 
 ---
