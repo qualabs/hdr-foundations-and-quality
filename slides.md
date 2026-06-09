@@ -57,3 +57,19 @@ src: ./pages/part1/part1-foundations.md
 ---
 src: ./pages/part2/part2-quality-metrics.md
 ---
+
+---
+layout: intro-image
+image: '/assets/plane.jpg'
+---
+
+<div class="absolute top-10">
+  <span class="font-700">
+    <img src="/assets/logo qualabs 2019 blanco .png" width="130" />
+  </span>
+</div>
+
+<div class="absolute bottom-10">
+  <h1>Thanks!</h1>
+  <p>Questions?</p>
+</div>

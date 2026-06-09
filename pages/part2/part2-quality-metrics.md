@@ -134,11 +134,6 @@ image: '/assets/cinematic/cinematic-10.jpg'
 # 3. ColorVideoVDP
 
 ---
----
-# ColorVideoVDP
-<img src="/assets/part2/caja-negra-blanca.png" />
-
----
 layout: image-right
 image: '/assets/part2/cvvdp_input.jpeg'
 ---
@@ -285,15 +280,18 @@ class: text-md
 
 ---
 layout: statement-cover
-image: '/assets/cinematic/cinematic-6.jpg'
+image: '/assets/cinematic/cinematic-11.jpg'
 ---
 
 # 4. Hands-on
 
 ---
-layout: end
+layout: section
 ---
+# Workshop Instructions
 
-# Thanks
+Please follow the instructions in the following Github repo:
 
-Questions?
+[Demo: Part II - Quality Metrics](https://github.com/qualabs/hdr-foundations-and-quality/tree/main/demos/part2-quality-metrics) 
+
+to set up and run the hands-on session for Part II.
