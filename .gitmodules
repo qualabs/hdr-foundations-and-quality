@@ -1,3 +1,3 @@
-[submodule "demos/cvvdp/colorvideovdp"]
-	path = demos/cvvdp/colorvideovdp
+[submodule "demos/part2-quality-metrics/colorvideovdp"]
+	path = demos/part2-quality-metrics/colorvideovdp
 	url = https://github.com/gfxdisp/colorvideovdp
