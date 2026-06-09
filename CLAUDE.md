@@ -36,6 +36,19 @@ demos/
     01_ffprobe_hdr_inspection.sh # Demo 1 — reads VUI/SEI HDR10 metadata via ffprobe
     02_wrong_matrix_red_shift.py # Demo 2 — visualizes wrong YCbCr matrix shift (Python/Pillow)
     03_bit_depth_banding.sh      # Demo 3 — generates 8-bit vs 10-bit banding comparison
+  part2-quality-metrics/
+    README.md                    # workshop guide: installation + 5 exercises (ColorVideoVDP)
+    jod-to-human-preference.py   # converts JOD scores → human preference probability (Φ formula)
+    delta-jod-vs-probability.png # psychometric curve chart referenced in the workshop
+    assets/
+      ref.mp4                    # reference video (no distortion)
+      test-blur-20.mp4           # localized circular blur artifact
+      test-flicker-20.mp4        # localized circular flicker artifact
+      otros_ejemplos/            # additional aliasing/structure example clips
+    install/
+      Mac/setup.sh               # Mac: creates venv, installs PyTorch + ColorVideoVDP
+      Windows/setup.bat          # Windows: same setup via bat script
+    colorvideovdp/               # Git submodule — ColorVideoVDP library (pycvvdp + examples)
 ```
 
 ### Convenciones de paths en los slides

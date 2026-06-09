@@ -61,31 +61,18 @@ Three runnable scripts in [`demos/part1-foundations/`](demos/part1-foundations/)
 
 ---
 
-## Source files
+## Live Demos (Part II)
 
-```
-slides.md                        # entry point (theme, cover, agenda, src includes)
-pages/
-  part1/
-    part1-foundations.md         # Part I slides
-    skipped.md                   # slides removed from the deck, kept for reference
-  part2/
-    part2-quality-metrics.md     # Part II slides
-public/
-  assets/
-    part1/                       # Part I image assets
-    part2/                       # Part II image assets
-    cinematic/                   # shared cinematic backgrounds (cinematic-1..10.jpg)
-    plane.jpg                    # cover slide asset
-    logo qualabs 2019 blanco .png
-components/                      # custom Vue components
-snippets/                        # syntax-highlighted code snippets
-demos/
-  part1-foundations/
-    README.md                    # prerequisites + demo scripts documentation
-    01_ffprobe_hdr_inspection.sh # Demo 1 — reads VUI/SEI HDR10 metadata via ffprobe
-    02_wrong_matrix_red_shift.py # Demo 2 — visualizes wrong YCbCr matrix color shift (Python/Pillow)
-    03_bit_depth_banding.sh      # Demo 3 — generates 8-bit vs 10-bit banding comparison
-```
+Workshop-style hands-on session in [`demos/part2-quality-metrics/`](demos/part2-quality-metrics/), designed to be run alongside the **Hands-on** section of Part II. Full installation instructions and running order in the [demo README](demos/part2-quality-metrics/README.md).
 
----
+The workshop uses [ColorVideoVDP](demos/part2-quality-metrics/colorvideovdp/) (included as a Git submodule) and a set of curated video assets. Install first with the platform-specific script, then activate the virtual environment before the talk.
+
+| # | Exercise | Ties to slide | What it shows |
+|---|----------|--------------|---------------|
+| 0 | Installation (`install/Mac/setup.sh` · `install/Windows/setup.bat`) | Prerequisites | Creates a venv, installs PyTorch + ColorVideoVDP, runs a sanity check |
+| 1 | JOD comparison — blur vs. flicker | ColorVideoVDP outputs | Runs `cvvdp` on `test-blur-20.mp4` and `test-flicker-20.mp4` against `ref.mp4`; participants fill in the JOD table |
+| 2 | JOD → human preference (`jod-to-human-preference.py`) | Psychometric curve (ΔP formula) | Converts raw JOD scores to percentage of observers who would prefer the original |
+| 3 | Heatmap + distogram generation | A-sust / A-trans / RG / YV channels | Produces visual artifacts maps; participants diagnose *why* flicker is worse than blur |
+| 4 | Bonus — display swap (`standard_fhd` → `standard_4k`) | Display model & ppd | Shows how blur JOD degrades on 4K while flicker JOD stays flat, validating the spatial vs. temporal channel split |
+
+**Suggested order during the talk:** Exercise 0 must run before the session → Exercise 1 after the HDRMAX limitations slide → Exercises 2–3 after the ColorVideoVDP inputs/outputs slide → Exercise 4 as a wrap-up bonus.
