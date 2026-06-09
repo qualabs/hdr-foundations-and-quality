@@ -27,7 +27,7 @@ jobs:
         run: npm i
 
       - name: Build
-        run: npm run build --base /${{github.event.repository.name}}/
+        run: npm run build -- --base /${{github.event.repository.name}}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
