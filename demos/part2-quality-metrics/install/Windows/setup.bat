@@ -2,12 +2,12 @@
 REM ============================================================================
 REM ColorVideoVDP — Windows Setup Script (one-liner install)
 REM Usage:  setup.bat
-REM Run from:  demos\cvvdp\install\Windows\
+REM Run from:  demos\part2-quality-metrics\install\Windows\
 REM ============================================================================
 setlocal EnableDelayedExpansion
 
 set "SCRIPT_DIR=%~dp0"
-set "CVVDP_REPO=%SCRIPT_DIR%..\..\ColorVideoVDP"
+set "CVVDP_REPO=%SCRIPT_DIR%..\..\colorvideovdp"
 set "VENV_DIR=%CVVDP_REPO%\venv"
 
 echo.

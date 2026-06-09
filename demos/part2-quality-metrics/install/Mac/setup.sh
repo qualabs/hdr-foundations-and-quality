@@ -11,7 +11,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CVVDP_REPO="$(cd "$SCRIPT_DIR/../../ColorVideoVDP" && pwd)"
+CVVDP_REPO="$(cd "$SCRIPT_DIR/../../colorvideovdp" && pwd)"
 VENV_DIR="$CVVDP_REPO/venv"
 
 info()  { printf "${GREEN}[✔]${NC} %s\n" "$1"; }
